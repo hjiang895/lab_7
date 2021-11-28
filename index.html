@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Airport Map</title>
+		<link rel="icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/3127/3127404.svg">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- SCRIPTS -->
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+		<script src="https://unpkg.com/topojson@3"></script>
+		<script src="script.js" async defer type="module"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163440366-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-163440366-1');
+		</script>
+		
+	</head>
+
+	<body>
+
+		<div id="container" class="text-center">
+
+			<h2 id="title">Airport Connections</h2>
+			<br>
+
+			<!-- SELECT MODE -->
+			<input type="radio" id="force" name="display-type" value="force" checked>
+			<label for="force">Force</label>
+			<input type="radio" id="map" name="display-type" value="map">
+			<label for="map">Map</label>
+			<br>
+
+			<!-- CHART -->
+			<div id="chart"></div>
+
+	</body>
+</html>
